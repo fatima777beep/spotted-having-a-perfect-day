@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>The Perfect Day</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- LOADING SCREEN -->
+<div id="intro">
+    <div class="intro-content">
+        <p>XOXO</p>
+        <h1>GOSSIP GIRL</h1>
+        <span>You know you love me.</span>
+    </div>
+</div>
+
+
+<!-- Navigation -->
+<nav class="navbar">
+
+    <div class="logo">
+        GOSSIP GIRL
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#" onclick="showHome(); return false;">Home</a></li>
+        <li><a href="#" onclick="showMorning(); return false;">Morning</a></li>
+        <li><a href="#" onclick="showEvening(); return false;">Evening</a></li>
+        <li><a href="#" onclick="showNight(); return false;">Night</a></li>
+    </ul>
+
+    <a href="#" class="login-btn" onclick="signIn(); return false;">Sign In</a>
+
+</nav>
+
+
+<!-- LIVE CLOCK -->
+<div class="clock">
+    <span>NEW YORK</span>
+    <strong id="clock">00:00:00</strong>
+</div>
+
+
+<!-- HOME -->
+<main id="home" class="page hero active">
+
+    <p class="small-title">XOXO, GOSSIP GIRL</p>
+
+    <h1>
+        Spotted:<br>
+        <span>A Perfect Day</span>
+    </h1>
+
+    <p class="description">
+        Our girl waking up to the kind of morning that makes you want to stay
+        in bed just a little longer.
+    </p>
+
+    <button class="discover-btn" onclick="showMorning()">
+        BEGIN THE DAY
+    </button>
+
+</main>
+
+
+<!-- MORNING -->
+<section id="morning" class="page gallery-page">
+
+    <p class="small-title">XOXO, GOSSIP GIRL</p>
+
+    <h2>Morning</h2>
+
+    <p class="section-text">
+        A perfect morning begins with a little sunshine, good coffee,
+        and absolutely nowhere to be.
+    </p>
+
+    <div class="gallery">
+
+        <div class="image-card">
+            <img src="pint 4.jpg" alt="Morning Image 1" onclick="openImage(this)">
+            <p>Slow mornings</p>
+        </div>
+
+        <div class="image-card">
+            <img src="morning 1.jpg" alt="Morning Image 2" onclick="openImage(this)">
+            <p>Golden moments</p>
+        </div>
+
+        <div class="image-card">
+            <img src="85FBE22A-50ED-4B41-A963-BE40262CFF7A.jpeg"
+                 alt="Morning Image 3"
+                 onclick="openImage(this)">
+            <p>A little luxury</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EVENING -->
+<section id="evening" class="page gallery-page">
+
+    <p class="small-title">XOXO, GOSSIP GIRL</p>
+
+    <h2>Evening</h2>
+
+    <p class="section-text">
+        When the sun goes down, the city comes alive.
+    </p>
+
+    <div class="gallery">
+
+        <div class="image-card">
+            <img src="noon 3(1).jpg" alt="Evening Image 1" onclick="openImage(this)">
+            <p>City lights</p>
+        </div>
+
+        <div class="image-card">
+            <img src="noon 3 (4).jpg" alt="Evening Image 2" onclick="openImage(this)">
+            <p>Golden hour</p>
+        </div>
+
+        <div class="image-card">
+            <img src="noon 3 (3).jpg" alt="Evening Image 3" onclick="openImage(this)">
+            <p>After dark</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NIGHT -->
+<section id="night" class="page gallery-page">
+
+    <p class="small-title">XOXO, GOSSIP GIRL</p>
+
+    <h2>Night</h2>
+
+    <p class="section-text">
+        As the sun sets, the city comes alive. Dinner turns into conversations,
+        conversations turn into memories, and suddenly, we're wishing the night
+        didn't have to end.
+    </p>
+
+    <div class="gallery">
+
+        <div class="image-card">
+            <img src="night 1.jpg" alt="Night Image 1" onclick="openImage(this)">
+            <p>Midnight mood</p>
+        </div>
+
+        <div class="image-card">
+            <img src="night 2.jpg" alt="Night Image 2" onclick="openImage(this)">
+            <p>City after dark</p>
+        </div>
+
+        <div class="image-card">
+            <img src="night 3.jpg" alt="Night Image 3" onclick="openImage(this)">
+            <p>One last adventure</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE POPUP -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="expandedImage" src="" alt="Expanded image">
+</div>
+
+
+<!-- GOSSIP POPUP -->
+<div id="gossipPopup" class="gossip-popup">
+    <button onclick="closeGossip()">×</button>
+
+    <p class="gossip-label">SPOTTED 👀</p>
+
+    <p id="gossipText">
+        Someone's having a perfect day...
+    </p>
+
+    <span>XOXO, Gossip Girl</span>
+</div>
+
+
+<!-- SECRET BUTTON -->
+<button class="secret-btn" onclick="gossip()">
+    💋
+</button>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>You know you love me 💋</p>
+</footer>
+
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
