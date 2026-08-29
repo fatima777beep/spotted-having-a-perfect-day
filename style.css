@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+background-color: black;
+background-image: url("./download (1).jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
+
+/* DARK OVERLAY */
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.45);
+z-index: -1;
+}
+
+/* INTRO */
+
+#intro {
+position: fixed;
+inset: 0;
+background: black;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 9999;
+animation: introFade 1.5s ease 3s forwards;
+}
+
+.intro-content p {
+color: #f5f0a8;
+letter-spacing: 8px;
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+.intro-content h1 {
+color: white;
+font-size: 50px;
+letter-spacing: 8px;
+font-weight: 300;
+}
+
+.intro-content span {
+display: block;
+margin-top: 20px;
+color: #f5f0a8;
+font-style: italic;
+}
+
+@keyframes introFade {
+to {
+opacity: 0;
+visibility: hidden;
+}
+}
+
+/* NAVIGATION */
+
+.navbar {
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 60px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+position: relative;
+z-index: 10;
+}
+
+.logo {
+font-size: 22px;
+letter-spacing: 5px;
+color: #f5f0a8;
+font-weight: 300;
+}
+
+.nav-links {
+display: flex;
+gap: 40px;
+list-style: none;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 14px;
+letter-spacing: 1px;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: #f5f0a8;
+}
+
+.login-btn {
+color: #f5f0a8;
+border: 1px solid #f5f0a8;
+padding: 10px 22px;
+text-decoration: none;
+font-size: 13px;
+transition: 0.3s;
+}
+
+.login-btn:hover {
+background-color: #f5f0a8;
+color: black;
+}
+
+/* CLOCK */
+
+.clock {
+position: fixed;
+top: 100px;
+right: 30px;
+text-align: right;
+z-index: 5;
+}
+
+.clock span {
+display: block;
+color: #f5f0a8;
+font-size: 9px;
+letter-spacing: 3px;
+}
+
+.clock strong {
+font-size: 12px;
+font-weight: normal;
+}
+
+/* PAGES */
+
+.page {
+display: none;
+}
+
+.page.active {
+display: flex;
+animation: pageIn 0.6s ease;
+}
+
+@keyframes pageIn {
+from {
+opacity: 0;
+transform: translateY(15px);
+}
+
+```
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+
+/* HOME */
+
+.hero {
+min-height: calc(100vh - 80px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 40px 20px;
+}
+
+.small-title {
+color: #f5f0a8;
+font-size: 12px;
+letter-spacing: 5px;
+margin-bottom: 25px;
+}
+
+.hero h1 {
+font-size: 70px;
+font-weight: 300;
+line-height: 1.05;
+letter-spacing: 2px;
+}
+
+.hero h1 span {
+color: #f5f0a8;
+font-style: italic;
+}
+
+.description {
+max-width: 550px;
+margin-top: 25px;
+line-height: 1.7;
+font-size: 15px;
+color: #dddddd;
+}
+
+/* BUTTON */
+
+.discover-btn {
+margin-top: 35px;
+padding: 13px 30px;
+background: transparent;
+border: 1px solid #f5f0a8;
+color: #f5f0a8;
+letter-spacing: 2px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.discover-btn:hover {
+background: #f5f0a8;
+color: black;
+}
+
+/* GALLERY */
+
+.gallery-page {
+min-height: calc(100vh - 80px);
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 70px 40px;
+}
+
+.gallery-page h2 {
+font-size: 60px;
+font-weight: 300;
+color: #f5f0a8;
+font-style: italic;
+margin-bottom: 15px;
+}
+
+.section-text {
+max-width: 700px;
+color: #dddddd;
+line-height: 1.7;
+margin-bottom: 50px;
+}
+
+.gallery {
+display: flex;
+justify-content: center;
+gap: 25px;
+width: 100%;
+max-width: 1200px;
+}
+
+.image-card {
+width: 32%;
+overflow: hidden;
+}
+
+.image-card img {
+width: 100%;
+height: 420px;
+object-fit: cover;
+display: block;
+cursor: pointer;
+transition: transform 0.5s ease;
+}
+
+.image-card:hover img {
+transform: scale(1.06);
+}
+
+.image-card p {
+background: rgba(0, 0, 0, 0.75);
+color: #f5f0a8;
+padding: 15px;
+letter-spacing: 2px;
+}
+
+/* IMAGE MODAL */
+
+.image-modal {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.9);
+z-index: 1000;
+justify-content: center;
+align-items: center;
+}
+
+.image-modal img {
+max-width: 85%;
+max-height: 85%;
+object-fit: contain;
+}
+
+.close {
+position: absolute;
+top: 25px;
+right: 40px;
+font-size: 40px;
+color: #f5f0a8;
+cursor: pointer;
+}
+
+/* GOSSIP POPUP */
+
+.gossip-popup {
+position: fixed;
+right: 30px;
+bottom: 70px;
+width: 300px;
+padding: 25px;
+background: rgba(0, 0, 0, 0.95);
+border: 1px solid #f5f0a8;
+z-index: 500;
+display: none;
+box-shadow: 0 0 30px rgba(245, 240, 168, 0.15);
+}
+
+.gossip-popup button {
+position: absolute;
+right: 10px;
+top: 8px;
+border: none;
+background: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+
+.gossip-label {
+color: #f5f0a8;
+letter-spacing: 3px;
+font-size: 11px;
+margin-bottom: 15px;
+}
+
+#gossipText {
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.gossip-popup span {
+color: #f5f0a8;
+font-size: 11px;
+letter-spacing: 2px;
+}
+
+/* SECRET BUTTON */
+
+.secret-btn {
+position: fixed;
+left: 25px;
+bottom: 20px;
+width: 45px;
+height: 45px;
+border: 1px solid #f5f0a8;
+background: black;
+color: white;
+border-radius: 50%;
+font-size: 18px;
+cursor: pointer;
+z-index: 20;
+transition: 0.3s;
+}
+
+.secret-btn:hover {
+transform: scale(1.15);
+}
+
+/* FOOTER */
+
+footer {
+position: fixed;
+bottom: 20px;
+width: 100%;
+text-align: center;
+z-index: 10;
+pointer-events: none;
+}
+
+footer p {
+color: #f5f0a8;
+font-size: 12px;
+letter-spacing: 3px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+```
+.navbar {
+    padding: 0 20px;
+}
+
+.nav-links {
+    gap: 10px;
+}
+
+.nav-links a {
+    font-size: 10px;
+}
+
+.login-btn {
+    display: none;
+}
+
+.clock {
+    display: none;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.gallery-page {
+    padding: 60px 20px;
+}
+
+.gallery-page h2 {
+    font-size: 45px;
+}
+
+.gallery {
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-card {
+    width: 90%;
+}
+
+.image-card img {
+    height: 350px;
+}
+
+.gossip-popup {
+    right: 10px;
+    bottom: 70px;
+    width: 280px;
+}
+```
+
+}
